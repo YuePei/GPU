@@ -1,24 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oOv-EL-NWt">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--GPU-->
+        <scene sceneID="5sV-j0-rzc">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="ddJ-Bv-I0G" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kgm-N8-GGG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZSd-zp-pke">
+                                <rect key="frame" x="0.0" y="44" width="375" height="579"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZSd-zp-pke" firstAttribute="bottom" secondItem="wj5-Ab-gpj" secondAttribute="bottom" id="3RP-Tb-Y1C"/>
+                            <constraint firstItem="ZSd-zp-pke" firstAttribute="top" secondItem="Kgm-N8-GGG" secondAttribute="top" constant="44" id="BAf-Dw-vN4"/>
+                            <constraint firstAttribute="trailing" secondItem="ZSd-zp-pke" secondAttribute="trailing" id="EMD-mM-cK3"/>
+                            <constraint firstItem="ZSd-zp-pke" firstAttribute="leading" secondItem="Kgm-N8-GGG" secondAttribute="leading" id="ky0-rL-Hgd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wj5-Ab-gpj"/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="相册" id="koW-Hy-k0C">
+                            <color key="tintColor" red="0.91195875406265259" green="0.068111531436443329" blue="0.47645527124404907" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="selectImageFromAlbum:" destination="ddJ-Bv-I0G" id="d4h-vq-mR2"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem systemItem="camera" id="s7j-bM-OKb">
+                            <color key="tintColor" red="0.91195875406265259" green="0.068111531436443329" blue="0.47645527124404907" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="takePhoto:" destination="ddJ-Bv-I0G" id="hhH-FM-q3Y"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Vr2-di-ULd"/>
+                        <barButtonItem title="滤镜" id="qok-P0-OAl">
+                            <color key="tintColor" red="0.91195875406265259" green="0.068111531436443329" blue="0.47645527124404907" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="addFilter:" destination="ddJ-Bv-I0G" id="pvI-jp-ine"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="GPU" id="Dk0-vL-dSE">
+                        <barButtonItem key="rightBarButtonItem" image="保存" id="jvR-yU-KGV">
+                            <connections>
+                                <action selector="saveToAlbum:" destination="ddJ-Bv-I0G" id="Hx7-bd-4p0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="filterButton" destination="qok-P0-OAl" id="o9d-2P-EAe"/>
+                        <outlet property="middleImage" destination="ZSd-zp-pke" id="5pO-vu-Wbd"/>
+                        <outlet property="saveButton" destination="jvR-yU-KGV" id="8Qg-M9-3bo"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z0S-21-6M3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="520.79999999999995" y="111.0944527736132"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oWG-Jm-5aE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="oOv-EL-NWt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="MUv-rD-G2u">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="F4P-JN-3kG">
+                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="ddJ-Bv-I0G" kind="relationship" relationship="rootViewController" id="5PC-Hm-syN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A9W-7U-Dn7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-244" y="111"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="保存" width="20" height="20"/>
+    </resources>
 </document>

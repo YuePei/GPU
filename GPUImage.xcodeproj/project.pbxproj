@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00E92B8043FE93FC8CD6171E /* libPods-GPUImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C7704255D598901409C543D /* libPods-GPUImage.a */; };
 		9FE3F7D120E9B1E9000FA456 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FE3F7D020E9B1E9000FA456 /* AppDelegate.m */; };
 		9FE3F7D420E9B1E9000FA456 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FE3F7D320E9B1E9000FA456 /* ViewController.m */; };
 		9FE3F7D720E9B1E9000FA456 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FE3F7D520E9B1E9000FA456 /* Main.storyboard */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1275EA7DF453EEB4E179C710 /* Pods-GPUImage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPUImage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GPUImage/Pods-GPUImage.debug.xcconfig"; sourceTree = "<group>"; };
+		3C7704255D598901409C543D /* libPods-GPUImage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GPUImage.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FE3F7CC20E9B1E9000FA456 /* GPUImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPUImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FE3F7CF20E9B1E9000FA456 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9FE3F7D020E9B1E9000FA456 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 		9FE3F7DB20E9B1E9000FA456 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9FE3F7DD20E9B1E9000FA456 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9FE3F7DE20E9B1E9000FA456 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E8A3F76012EDF12C20EC280E /* Pods-GPUImage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPUImage.release.xcconfig"; path = "Pods/Target Support Files/Pods-GPUImage/Pods-GPUImage.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00E92B8043FE93FC8CD6171E /* libPods-GPUImage.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		35779C1E3274C527F46F0FEB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1275EA7DF453EEB4E179C710 /* Pods-GPUImage.debug.xcconfig */,
+				E8A3F76012EDF12C20EC280E /* Pods-GPUImage.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		9FE3F7C320E9B1E9000FA456 = {
 			isa = PBXGroup;
 			children = (
 				9FE3F7CE20E9B1E9000FA456 /* GPUImage */,
 				9FE3F7CD20E9B1E9000FA456 /* Products */,
+				35779C1E3274C527F46F0FEB /* Pods */,
+				F16918DD9466386B8E7D083C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +87,14 @@
 			path = GPUImage;
 			sourceTree = "<group>";
 		};
+		F16918DD9466386B8E7D083C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C7704255D598901409C543D /* libPods-GPUImage.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,9 +102,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9FE3F7E220E9B1E9000FA456 /* Build configuration list for PBXNativeTarget "GPUImage" */;
 			buildPhases = (
+				2B6D29847AFB430D9160AA8D /* [CP] Check Pods Manifest.lock */,
 				9FE3F7C820E9B1E9000FA456 /* Sources */,
 				9FE3F7C920E9B1E9000FA456 /* Frameworks */,
 				9FE3F7CA20E9B1E9000FA456 /* Resources */,
+				EBDF482125E69DDD33418E7D /* [CP] Embed Pods Frameworks */,
+				75E193F0FA8296E52302BFED /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -136,6 +163,68 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2B6D29847AFB430D9160AA8D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GPUImage-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		75E193F0FA8296E52302BFED /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GPUImage/Pods-GPUImage-resources.sh",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup.png",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_amatorka.png",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_miss_etikate.png",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_1.png",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_2.png",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_amatorka.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_miss_etikate.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_soft_elegance_1.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_soft_elegance_2.png",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GPUImage/Pods-GPUImage-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EBDF482125E69DDD33418E7D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GPUImage/Pods-GPUImage-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9FE3F7C820E9B1E9000FA456 /* Sources */ = {
@@ -276,11 +365,13 @@
 		};
 		9FE3F7E320E9B1E9000FA456 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1275EA7DF453EEB4E179C710 /* Pods-GPUImage.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 47A3N54MRY;
 				INFOPLIST_FILE = GPUImage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Peyton.GPUImage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -290,11 +381,13 @@
 		};
 		9FE3F7E420E9B1E9000FA456 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8A3F76012EDF12C20EC280E /* Pods-GPUImage.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 47A3N54MRY;
 				INFOPLIST_FILE = GPUImage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Peyton.GPUImage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
